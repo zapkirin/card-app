@@ -1,0 +1,38 @@
+.other{
+    display: flex;
+    flex-direction: row;
+  }
+  .exp{
+    display: flex;
+    flex-direction: column;
+  }
+  .expInner{
+    display: flex;
+    flex-direction: row;
+  }
+  .cvc{
+    display: flex;
+    flex-direction: column;
+  }
+  .submitButton{
+    height: 53px;
+width: 382px;
+/* left: -343px;
+top: 2617px; */
+border-radius: 6px;
+color: aliceblue;
+background-color:#220930
+}
+.mm,.yy{
+    height: 44px;
+    width: 78px;
+    
+    margin-right: 10px;
+}
+.cvcBox{
+    height: 44px;
+    width: 189px;
+}
+label{
+    color: red;
+}
