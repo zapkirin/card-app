@@ -1,1 +1,1 @@
-#https://zapkirin.github.io/card-app/-deploy link
+#https://zapkirin.github.io/card-app/   -deploy link
