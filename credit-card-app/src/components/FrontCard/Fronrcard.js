@@ -8,14 +8,14 @@ export function Fronrcard(props) {
             {props.error?'':<img className='ellipse2' src={require("./Ellipse 2.png")} alt="" />}
         </div>
         <div className="card-num">
-            <h1>{props.cardNumber}</h1>
+            <h1>{props.error?'':props.cardNumber}</h1>
             </div>
             <div className="bio">
                 <div className="name">
-                    <h3>{props.holderName}</h3>
+                    <h4>{props.error?'':props.holderName.toUpperCase()}</h4>
                     </div>
                     <div className="expiry">
-                        <h3>{props.expMonth}/{props.expYear}</h3>
+                        <h3>{props.error?'':props.expMonth}/{props.error?'':props.expYear}</h3>
                     </div>
             </div>
         

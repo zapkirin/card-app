@@ -8,7 +8,7 @@ function RearCard(props) {
 
         </div>
         <div className="strip2">
-{props.cvc}
+{props.error?'':props.cvc}
         </div>
     </div>
   )

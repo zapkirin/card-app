@@ -21,17 +21,54 @@ width: 382px;
 top: 2617px; */
 border-radius: 6px;
 color: aliceblue;
-background-color:#220930
+background-color:#220930;
+margin-top: 20px;
+}
+.hName,.cNum{
+  height: 44px;
+width: 382px;
+left: -423px;
+top: 1138px;
+border-radius: 6px;
+border: 1px solid #00000021;
+color: #BBB9BC;
+font-family: Inter;
+font-size: 15px;
+font-weight: 600;
+line-height: 18px;
+letter-spacing: 0.125em;
+text-align: left;
+
+
 }
 .mm,.yy{
     height: 44px;
     width: 78px;
-    
+    border-radius: 6px;
     margin-right: 10px;
+    border: 1px solid #00000021;
+    color: #BBB9BC;
+    font-family: Inter;
+font-size: 15px;
+font-weight: 600;
+line-height: 18px;
+letter-spacing: 0.125em;
+text-align: left;
+
 }
 .cvcBox{
     height: 44px;
     width: 189px;
+    border-radius: 6px;
+    border: 1px solid #00000021;
+    color: #BBB9BC;
+    font-family: Inter;
+font-size: 15px;
+font-weight: 600;
+line-height: 18px;
+letter-spacing: 0.125em;
+text-align: left;
+
 }
 label{
     color: red;

@@ -3,17 +3,21 @@ import './Form.css'
 import RearCard from '../RearCard/RearCard'
 import { Fronrcard } from '../FrontCard/Fronrcard'
 export function Form() {
-  const[error,setError]=useState(false)
+  const[error,setError]=useState(true)
   const [holderName, setHolderName] = useState('')
   const[cardNumber,setCardNumber]=useState('')
   const[expMonth,setExpMonth]=useState('')
   const[expYear,setExpYear]=useState('')
   const[cvc,setCvc]=useState('')
   let formData=null
+
   const handleClick=(e)=>{
     e.preventDefault()
-    if(holderName.length===0 || cardNumber.length===0 || expMonth>12 || cvc.length ===0){
+    if(holderName.length===0 || cardNumber.length===0 || cvc.length ===0){
       setError(true)
+    }
+    else{
+      setError(false)
     }
     formData={
       holderName,cardNumber,expMonth,expYear,cvc
@@ -27,13 +31,13 @@ export function Form() {
     <form action="">
       <div className='holderName'>
         <strong>CARDHOLDER NAME</strong><br/>
-        <input placeholder='e.g. Jane Appleseed' onChange={e=>setHolderName(e.target.value)}></input>
+        <input className='hName' placeholder='e.g. Jane Appleseed' onChange={e=>setHolderName(e.target.value)}></input>
       </div>
       {error&&holderName.length<=0?<label htmlFor="">Cardholder name can't be empty</label>:''}
       
       <div className='number'>
         <strong>CARD NUMBER</strong><br/>
-        <input placeholder='e.g. 1234 5678 9123 0000' onChange={e=>setCardNumber(e.target.value)}></input>
+        <input className='cNum' placeholder='e.g. 1234 5678 9123 0000' onChange={e=>setCardNumber(e.target.value)}></input>
       </div>
       {error&&cardNumber.length<=0?<label htmlFor="">Card number required</label>:''}
       <div className="other">
@@ -57,7 +61,7 @@ export function Form() {
         </button>
       </div>
     </form>
-    <RearCard cvc={cvc}/>
+    <RearCard error={error} cvc={cvc}/>
     </>
   )
 }
